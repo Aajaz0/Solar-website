@@ -72,23 +72,37 @@ to reduce electricity bills and adopt clean energy.
 
 <section id="contact">
 <h2>Contact Us</h2>
-<p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-<p><strong>WhatsApp:</strong> +91-XXXXXXXXXX</p>
-<p><strong>Location:</strong> Your City / District</p>
+<p><strong>Phone:</strong> +91-9797971040</p>
+<p><strong>WhatsApp:</strong> +91-9797971040</p>
+<p><strong>Location:</strong> Villagam / Kupwara</p>
 
 <h3>Send Enquiry</h3>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Mobile Number" required>
-<textarea placeholder="Your Requirement"></textarea>
-<button class="btn" type="submit">Send</button>
+ <form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+<textarea id="msg" placeholder="Your Requirement"></textarea>
+<button class="btn" type="submit">Send on WhatsApp</button>
 </form>
 
+<script>
+function sendWhatsApp(){
+var name = document.getElementById("name").value;
+var mobile = document.getElementById("mobile").value;
+var msg = document.getElementById("msg").value;
+
+var url = "https://wa.me/917006376349?text="
++ "Name: " + name + "%0a"
++ "Mobile: " + mobile + "%0a"
++ "Requirement: " + msg;
+
+window.open(url, "_blank");
+}
+</script>
 <h3>Our Location</h3>
-<iframe 
-src="https://www.google.com/maps?q=India&output=embed"
+ <iframe 
+src="https://www.google.com/maps?q=Villagam,Kupwara,Jammu%20and%20Kashmir&output=embed"
 width="100%" height="250" style="border:0;" allowfullscreen>
-</iframe>
+ </iframe>
 </section>
 
 <footer>
@@ -96,7 +110,7 @@ width="100%" height="250" style="border:0;" allowfullscreen>
 </footer>
 
 <a class="whatsapp" 
-href="https://wa.me/91XXXXXXXXXX" target="_blank">💬</a>
+href="https://wa.me/917006376349" target="_blank">💬</a>
 
 </body>
 </html>
